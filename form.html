@@ -26,6 +26,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="invetario.html">Inventario</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="form.html">Form</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -33,26 +36,26 @@
 </head>
 <body>
     <div class="container mt-5"> 
-        <h2>Editar Receta</h2> 
+        <h2>Nuevo ingrediente</h2> 
         <form action="" method="post"> 
-            <div class="form-group"> 
+            <div class="col-sm-2 col-md-4 "> 
                 <label for="nombreReceta">Nombre de la receta:</label> 
-                <input type="text" class="form-control" id="nombreReceta" name="nombreReceta" required> 
+                <input type="text" class="form-control" placeholder="Ejemplo: Chicharos. " id="nombreReceta" name="nombreReceta" required> 
             </div> 
              
-            <div class="form-group"> 
-                <label for="descripcionReceta">Descripción de la receta:</label> 
-                <textarea class="form-control" id="descripcionReceta" name="descripcionReceta" rows="4" required></textarea> 
+            <div class="col-sm-2 col-md-4"> 
+                <label for="descripcionReceta">Cantidad de Inventario:</label> 
+                <input type="number" class="form-control" id="cantidad" placeholder="Ingresa numeros enteros." name="cantidad" step="1.0" required> 
             </div> 
+
+            <div class="col-sm-2 col-md-4 "> 
+              <label for="costoReceta">Costo del ingrediente:</label> 
+              <input type="number" class="form-control" id="costoReceta" placeholder="Precio neto del producto." name="costoReceta" step="0.01" required> 
+          </div> 
              
-            <div class="form-group"> 
-                <label for="ingredientes">Ingredientes:</label> 
-                <textarea class="form-control" id="ingredientes" name="ingredientes" rows="6" required></textarea> 
-            </div> 
-             
-            <div class="form-group"> 
-                <label for="costoReceta">Costo de la receta:</label> 
-                <input type="number" class="form-control" id="costoReceta" name="costoReceta" step="0.01" required> 
+            <div class="col-sm-2 col-md-4 "> 
+                <label for="ingredientes">Descripcion del ingrediente</label> 
+                <textarea class="form-control" id="ingredientes" name="ingredientes" placeholder="Pon una breve descripcion del ingrediente." rows="6" required></textarea> 
             </div> 
              
             <button type="submit" class="btn btn-primary">Guardar Cambios</button> 
